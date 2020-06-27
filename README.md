@@ -1,9 +1,10 @@
+
 nest-fgql
 =========
 
-<p align="center">A fast and lightweight module to expose [GraphQL](https://graphql.org/)  APIs in a [NestJS](https://nestjs.com) application.</p>
+<a href="https://circleci.com/gh/mirco312312/nest-fgql" target="_blank"><img src="https://img.shields.io/circleci/build/github/mirco312312/nest-fgql/master" alt="CircleCI" /></a>
 
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+A fast and lightweight module to expose [GraphQL](https://graphql.org/)  APIs in a [NestJS](https://nestjs.com) application.
 
 ## Description
 
