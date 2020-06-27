@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@mirco312312/nest-fgql": ["*"]
+    },
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": false,
+    "outDir": "./dist",
+    "rootDir": "./lib",
+    "skipLibCheck": true
+  },
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
