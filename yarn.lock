@@ -1113,7 +1113,7 @@
     tslib "2.0.0"
     uuid "8.1.0"
 
-"@nestjs/platform-fastify@^7.2.0":
+"@nestjs/platform-fastify@7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@nestjs/platform-fastify/-/platform-fastify-7.2.0.tgz#f8cdbdcfc2632ae2658a91681fd1669596cc501d"
   integrity sha512-e5orf77ujfK+pygPMWnad/ERmqwXSobzwYCjrFFMm5Nby9EAA+scpqTcGnvKwQ8ts30AN0tNlqTL59VRiqbv+Q==
