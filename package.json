@@ -1,6 +1,6 @@
 {
   "name": "@mirco312312/nest-fgql",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fast, lightweight GraphQL module to be used in NestJS",
   "author": "Mirco Bartels",
   "license": "MIT",
