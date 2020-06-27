@@ -1,9 +1,17 @@
 {
   "name": "@mirco312312/nest-fgql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast, lightweight GraphQL module to be used in NestJS",
   "author": "Mirco Bartels",
   "license": "MIT",
+  "keywords": [
+    "nest",
+    "nestjs",
+    "graphql",
+    "graphql-jit",
+    "fastify",
+    "fastify-gql"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.json",
@@ -37,7 +45,6 @@
     "eslint": "7.3.1",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-import": "2.21.2",
-    "fastify-gql": "^4.1.0",
     "husky": "4.2.5",
     "jest": "26.1.0",
     "lint-staged": "10.2.11",
@@ -55,7 +62,8 @@
     "graphql-tag": "^2.10.3",
     "graphql-tools": "^6.0.11",
     "iterall": "^1.3.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "fastify-gql": "^4.1.0"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.0.0",
