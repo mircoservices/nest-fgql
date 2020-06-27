@@ -7,11 +7,11 @@ aliases:
   - &install-deps
     run:
         name: Install dependencies
-        command: npm ci
+        command: yarn --frozen-lockfile
   - &build-packages
     run:
         name: Build
-        command: npm run build
+        command: yarn build
 
 jobs:
   build:
@@ -20,21 +20,18 @@ jobs:
       - image: circleci/node:12
     steps:
       - checkout
-      - run:
-          name: Update NPM version
-          command: 'sudo npm install -g npm@latest'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install dependencies
-          command: npm ci
+          command: yarn --frozen-lockfile
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
           name: Build
-          command: npm run build    
+          command: yarn build    
 
   integration_tests:
     working_directory: ~/nest
@@ -46,7 +43,7 @@ jobs:
       - *install-deps
       - run:
           name: Integration tests
-          command: npm run test:integration
+          command: yarn test:integration
 
 workflows:
   version: 2
