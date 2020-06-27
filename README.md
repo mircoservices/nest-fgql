@@ -1,10 +1,12 @@
-# nest-fgql
+nest-fgql
+=========
+
+A fast and lightweight module to expose [GraphQL](https://graphql.org/) APIs in a [NestJS](https://nestjs.com) application.
+
 <p>
     <a href="https://circleci.com/gh/mirco312312/nest-fgql" target="_blank"><img src="https://img.shields.io/circleci/build/github/mirco312312/nest-fgql/master" alt="CircleCI" /></a>
     <a href="https://www.npmjs.com/package/@mirco312312/nest-fgql" target="_blank"><img alt="npm (scoped)" src="https://img.shields.io/npm/v/@mirco312312/nest-fgql"></a>
 </p>
-
-A fast and lightweight module to expose [GraphQL](https://graphql.org/) APIs in a [NestJS](https://nestjs.com) application.
 
 ## Description
 
