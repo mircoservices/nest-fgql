@@ -1,16 +1,47 @@
-
-nest-fgql
-=========
+# nest-fgql
 
 <a href="https://circleci.com/gh/mirco312312/nest-fgql" target="_blank"><img src="https://img.shields.io/circleci/build/github/mirco312312/nest-fgql/master" alt="CircleCI" /></a>
 
-A fast and lightweight module to expose [GraphQL](https://graphql.org/)  APIs in a [NestJS](https://nestjs.com) application.
+A fast and lightweight module to expose [GraphQL](https://graphql.org/) APIs in a [NestJS](https://nestjs.com) application.
 
 ## Description
 
 This is intended to be a drop-in replacement for [@nestjs/graphql](https://github.com/nestjs/graphql) that offers improved runtime performance.
 
 [Benchmarks](https://github.com/benawad/node-graphql-benchmarks) show that Apollo adds a noteable overhead regarding performance. Using [fastify](https://github.com/fastify/fastify) and [graphql-jit](https://github.com/zalando-incubator/graphql-jit) via [fastify-gql](https://github.com/mcollina/fastify-gql) performance is improved.
+
+## Usage
+
+### Requirements
+
+Must first follow the [Performance (Fastify)
+](https://docs.nestjs.com/techniques/performance) guide to setup [fastify](https://github.com/fastify/fastify).
+
+### Install
+
+```
+yarn add @mirco312312/nest-fgql
+```
+
+### Code
+
+```
+import { Module } from '@nestjs/common';
+import { FgqlModule } from '@mirco312312/nest-fgql';
+// ... your other imports
+
+@Module({
+  imports: [
+    // ... preceeding modules
+    FgqlModule.forRoot({
+      autoSchemaFile: true,
+      // ... any other options
+    }),
+    // ... more modules
+  ],
+})
+export class ApplicationModule {}
+```
 
 ## Performance
 
@@ -48,9 +79,8 @@ autocannon -d 10 -c100 \
 
 MacBook Pro (16-inch, 2019)
 
-* 2,4 GHz 8-Core Intel Core i9
-* 64 GB 2667 MHz DDR4
-
+- 2,4 GHz 8-Core Intel Core i9
+- 64 GB 2667 MHz DDR4
 
 #### @nestjs/graphql
 
