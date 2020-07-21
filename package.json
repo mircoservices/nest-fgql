@@ -1,6 +1,6 @@
 {
   "name": "@mirco312312/nest-fgql",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Fast, lightweight GraphQL module to be used in NestJS",
   "author": "Mirco Bartels",
   "license": "MIT",
@@ -59,8 +59,8 @@
     "typescript": "3.9.3"
   },
   "dependencies": {
-    "fastify-gql": "^4.3.0",
-    "graphql": "^15.1.0",
+    "fastify-gql": "mirco312312/fastify-gql#82ba396f87e48e4a7f507aeac448685444609fb3",
+    "graphql": "^15.3.0",
     "graphql-tag": "^2.10.3",
     "graphql-tools": "^6.0.11",
     "iterall": "^1.3.0",
