@@ -3392,10 +3392,10 @@ fastify-formbody@3.2.0:
     fastify-plugin "^1.6.1"
     qs "^6.9.4"
 
-fastify-gql@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/fastify-gql/-/fastify-gql-4.1.0.tgz#e82b302b26f4d24252edef31e8cc93206712a3a0"
-  integrity sha512-vmtzLFA0D9N2+N5u2vRrXRhiLasUpPZ2EBFbIy6FafmmEMg7gDhuR9FDs/OL29Vbf8WCX+CEMhcai/fJrWylJA==
+fastify-gql@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/fastify-gql/-/fastify-gql-4.3.0.tgz#a62a6114cda44bd9dd53b6dc9f3daba7df342f26"
+  integrity sha512-idt32GZGzNCDnNgtCpDukJOMRiOWMwVzmVZFB6dtSqhzjMeP1AwoUT7Cr34ENF8CxKIh779PQczTucje7vfa3A==
   dependencies:
     end-of-stream "^1.4.4"
     fastify-plugin "^1.6.0"
