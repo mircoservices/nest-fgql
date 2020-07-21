@@ -15,7 +15,7 @@ export function mergeDefaults(
     ...options,
   };
   if (!moduleOptions.context) {
-    moduleOptions.context = ({ req }) => ({ req });
+    moduleOptions.context = ({ req }) => Promise.resolve({ req });
   } else if (isFunction(moduleOptions.context)) {
     moduleOptions.context = async (...args: unknown[]) => {
       const ctx = await (options.context as Function)(...args);
@@ -24,7 +24,7 @@ export function mergeDefaults(
     };
   } else {
     moduleOptions.context = ({ req }: Record<string, unknown>) => {
-      return assignReqProperty(options.context as Record<string, any>, req);
+      return Promise.resolve(assignReqProperty(options.context as Record<string, any>, req));
     };
   }
   return moduleOptions;
