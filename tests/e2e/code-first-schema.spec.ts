@@ -6,12 +6,12 @@ import {
   IntrospectionField,
   IntrospectionSchema,
   printSchema,
-  TypeKind
+  TypeKind,
 } from 'graphql';
 import { SDL_FILE_HEADER } from '../../lib/fgql.constants';
 import {
   GraphQLSchemaBuilderModule,
-  GraphQLSchemaFactory
+  GraphQLSchemaFactory,
 } from '../../lib/schema-builder';
 import { DirectionsResolver } from '../code-first/directions/directions.resolver';
 import { AbstractResolver } from '../code-first/other/abstract.resolver';
@@ -23,8 +23,8 @@ import {
   getMutationByName,
   getQuery,
   getQueryByName,
-
-  getSubscriptionByName
+  getSubscription,
+  getSubscriptionByName,
 } from '../utils/introspection-schema.utils';
 import { printedSchemaSnapshot } from '../utils/printed-schema.snapshot';
 
@@ -84,14 +84,14 @@ describe('Code-first - schema factory', () => {
       );
     });
 
-    // it('should define "recipeAdded" subscription', async () => {
-    //   const type = getSubscription(introspectionSchema);
+    it('should define "recipeAdded" subscription', async () => {
+      const type = getSubscription(introspectionSchema);
 
-    //   expect(type.fields.length).toEqual(1);
-    //   expect(type.fields.map((item) => item.name)).toEqual(
-    //     jasmine.arrayContaining(['recipeAdded']),
-    //   );
-    // });
+      expect(type.fields.length).toEqual(1);
+      expect(type.fields.map((item) => item.name)).toEqual(
+        jasmine.arrayContaining(['recipeAdded']),
+      );
+    });
 
     it('should not define an abstract resolver', () => {
       const abstractQuery = getQueryByName(
