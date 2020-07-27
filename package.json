@@ -59,7 +59,7 @@
     "typescript": "3.9.3"
   },
   "dependencies": {
-    "fastify-gql": "mirco312312/fastify-gql#5d14c28b2f52fea9fae771614c68397cfafb6892",
+    "fastify-gql": "mirco312312/fastify-gql#5c915fdd0362e6e578d8387c8ad1953485b865de",
     "graphql": "^15.3.0",
     "graphql-tag": "^2.10.3",
     "graphql-tools": "^6.0.11",
