@@ -3371,9 +3371,9 @@ fastify-formbody@3.2.0:
     fastify-plugin "^1.6.1"
     qs "^6.9.4"
 
-fastify-gql@mirco312312/fastify-gql#e9bdb594d640b1a2966160fbb8ee04ea23619dc5:
+fastify-gql@mirco312312/fastify-gql#5d14c28b2f52fea9fae771614c68397cfafb6892:
   version "4.3.0"
-  resolved "https://codeload.github.com/mirco312312/fastify-gql/tar.gz/e9bdb594d640b1a2966160fbb8ee04ea23619dc5"
+  resolved "https://codeload.github.com/mirco312312/fastify-gql/tar.gz/5d14c28b2f52fea9fae771614c68397cfafb6892"
   dependencies:
     end-of-stream "^1.4.4"
     fastify-plugin "^1.6.0"
