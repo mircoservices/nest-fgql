@@ -1,3 +1,4 @@
+import { FastifyReply, FastifyRequest } from 'fastify';
 import { isFunction } from '@nestjs/common/utils/shared.utils';
 import { FgqlModuleOptions } from '../interfaces/fgql-module-options.interface';
 
@@ -15,16 +16,26 @@ export function mergeDefaults(
     ...options,
   };
   if (!moduleOptions.context) {
-    moduleOptions.context = ({ req }) => Promise.resolve({ req });
+    moduleOptions.context = (
+      request: FastifyRequest,
+      reply: FastifyReply<unknown>,
+    ) => Promise.resolve({ req: request });
   } else if (isFunction(moduleOptions.context)) {
-    moduleOptions.context = async (...args: unknown[]) => {
-      const ctx = await (options.context as Function)(...args);
-      const { req } = args[0] as Record<string, unknown>;
-      return assignReqProperty(ctx, req);
+    moduleOptions.context = async (
+      request: FastifyRequest,
+      reply: FastifyReply<unknown>,
+    ) => {
+      const ctx = await (options.context as Function)(request, reply);
+      return assignReqProperty(ctx, request);
     };
   } else {
-    moduleOptions.context = ({ req }: Record<string, unknown>) => {
-      return Promise.resolve(assignReqProperty(options.context as Record<string, any>, req));
+    moduleOptions.context = (
+      request: FastifyRequest,
+      reply: FastifyReply<unknown>,
+    ) => {
+      return Promise.resolve(
+        assignReqProperty(options.context as Record<string, any>, request),
+      );
     };
   }
   return moduleOptions;

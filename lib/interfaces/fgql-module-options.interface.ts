@@ -6,7 +6,7 @@ import { DefinitionsGeneratorOptions } from '../graphql/graphql-ast.explorer';
 import { BuildSchemaOptions } from './build-schema-options.interface';
 
 export interface FgqlModuleOptions
-  extends Omit<GQL.Options, 'schema' | 'resolvers'> {
+  extends Omit<GQL.FastifyGQLOptions, 'schema' | 'resolvers'> {
   schema?: GraphQLSchema;
   resolvers?: IResolvers;
   typeDefs?: string | string[];
